@@ -17,6 +17,7 @@ To set up authentication, update the following parameters in [cloud.properties](
 * accessKey -  Personal authentication. See [Obtaining Access Key](https://docs.experitest.com/pages/viewpage.action?pageId=52593435) to learn how to obtain an access key.
 
 ## Running Tests
+This project uses python 3. Make sure you have python 3 installed on your machine.
 
 If this is the first time running the tests, set up dependencies with
 ```bash
