@@ -26,7 +26,7 @@ pip install -r requirements.txt
 To run all tests in this project, execute to following command line: 
 
 ```bash
-python -m unittest test
+python -m unittest
 ```
 
 ## Upload Application to the Cloud
