@@ -1,22 +1,18 @@
-# CommunityCode-Mobile-PythonStarterProject
+# Community Code - Mobile - Python Starter Project
 This project demonstrates how to write tests for Continuous Testing Cloud using Python. Once cloned and set up properly, it runs as is.
 
 ## Setting Up the Sample Project
 
 1. Clone the sample project.
-
-```bash
-git clone https://github.com/ExperitestOfficial/CommunityCode-Mobile-PythonStarterProject
-cd CommunityCode-Mobile-PythonStarterProject
-```
-
-
+    ```bash
+    git clone https://github.com/ExperitestOfficial/CommunityCode-Mobile-PythonStarterProject
+    cd CommunityCode-Mobile-PythonStarterProject
+    ```
 1. Set up authentication by updating these  parameters in [cloud.properties](cloud.properties):
-   * url - URL for the cloud to run the test in. For example, https://company.digitai.ai/
-   * accessKey -  Personal authentication. See [Obtaining Access Key](https://docs.experitest.com/pages/viewpage.action?pageId=52593435) to learn how to obtain an access key.
-
-2. Make sure that Python 3 is installed.
-3. Install the dependencies.
+    * url - URL for the cloud to run the test in. For example, https://company.digitai.ai/
+    * accessKey -  Personal authentication. See [Obtaining Access Key](https://docs.experitest.com/pages/viewpage.action?pageId=52593435) to learn how to obtain an access key.
+1. Make sure that Python 3 is installed.
+1. Install the dependencies.
 ```bash
 pip install -r requirements.txt
 ```
@@ -33,9 +29,9 @@ python -m unittest test
 The example tests in this project use a demo application.
 To upload your own application to cloud:
 1. Log in to the cloud using a browser.
-2. In the left menu click Applications.
-3. Click Upload.
-4. Click the application file to upload.
+1. In the left menu click Applications.
+1. Click Upload.
+1. Click the application file to upload.
 
 In your tests, change *com.experitest.ExperiBank* (and activity if needed) in desired capabilities for your application, in the following lines:
 
