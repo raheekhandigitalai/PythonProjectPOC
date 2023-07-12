@@ -26,7 +26,7 @@ python -m unittest
 
 ## Upload Application to the Cloud
 
-The example tests in this project use a demo application.
+The example tests in native_demo use a demo application.
 To upload your own application to cloud:
 1. Log in to the cloud using a browser.
 1. In the left menu click Applications.
