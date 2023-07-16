@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from appium.options.common import AppiumOptions
 
+
 class LocalIosTest(base_test.BaseTest):
 
     testName = 'iOS Web Demo'

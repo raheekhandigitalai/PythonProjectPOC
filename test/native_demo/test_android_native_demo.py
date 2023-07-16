@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.ui import WebDriverWait
 from appium.options.common import AppiumOptions
 
+
 class AndroidDemoTest(base_test.BaseTest):
 
     testName = 'Android Native Demo'
