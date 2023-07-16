@@ -3,6 +3,7 @@ from appium import webdriver
 from selenium.webdriver.common.by import By
 from appium.options.common import AppiumOptions
 
+
 class IosDemoTest(base_test.BaseTest):
 
     testName = 'iOS Native Demo'

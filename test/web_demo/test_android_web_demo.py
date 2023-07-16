@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from appium.options.common import AppiumOptions
 
+
 class LocalAndroidTest(base_test.BaseTest):
 
     testName = 'Android Web Demo'
@@ -24,7 +25,8 @@ class LocalAndroidTest(base_test.BaseTest):
     def testAndroidWebDemo(self):
         self.driver.get('https://demo-bank.ct.digital.ai')
 
-        WebDriverWait(self.driver, 10).until(expected_conditions.presence_of_element_located((By.ID, 'login')))
+        WebDriverWait(self.driver, 10)\
+            .until(expected_conditions.presence_of_element_located((By.XPATH, "//*[@data-auto='login']")))
 
         self.driver.find_element(By.XPATH, "//*[@data-auto='username']//input").send_keys('company')
         self.driver.find_element(By.XPATH, "//*[@data-auto='password']//input").send_keys('company')
