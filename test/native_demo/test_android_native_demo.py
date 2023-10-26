@@ -1,3 +1,4 @@
+import os
 from test import base_test
 from appium import webdriver
 from selenium.webdriver.common.by import By
@@ -7,6 +8,8 @@ from appium.options.common import AppiumOptions
 
 
 class AndroidDemoTest(base_test.BaseTest):
+
+    proxyUrl = "http://ip:port"
 
     testName = 'Android Native Demo'
     driver = None
@@ -20,6 +23,10 @@ class AndroidDemoTest(base_test.BaseTest):
         self.options.set_capability('appActivity', '.LoginActivity')
         self.options.set_capability('platformName', 'android')
         self.options.set_capability('udid', "RFCR20P6TPL")
+
+        # os.environ["HTTP_PROXY"] = self.proxyUrl
+        # os.environ["HTTPS_PROXY"] = self.proxyUrl
+
         self.driver = webdriver.Remote(self.getUrl(), options=self.options)
 
     def testAndroidNativeDemo(self):

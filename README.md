@@ -16,13 +16,27 @@ pip3 install -r requirements.txt
 ```
 
 ## Running Tests
-To run iOS Native Test in this project, run this on the command line: 
+
+If you need add proxy details, add relevant IP and Port under **test/native_demo/test_android_native_demo.py** and **test/native_demo/test_ios_native_demo.py** in line 11:
+
+```bash
+proxyUrl = "http://ip:port"
+```
+
+and uncomment line 27 & 28:
+
+```bash
+os.environ["HTTP_PROXY"] = self.proxyUrl
+os.environ["HTTPS_PROXY"] = self.proxyUrl
+```
+
+To run iOS Native Test, run the following line from your Terminal: 
 
 ```bash
 python3 -m unittest test/native_demo/test_ios_native_demo.py
 ```
 
-To run Android Native Test in this project, run this on the command line:
+To run Android Native Test, run the following line from your Terminal:
 
 ```bash
 python3 -m unittest test/native_demo/test_android_native_demo.py
