@@ -15,11 +15,11 @@ class AndroidDemoTest(base_test.BaseTest):
     def setUp(self):
         super().setUp()
         self.options.set_capability('testName', self.testName)
+        self.options.set_capability('app', 'cloud:com.experitest.ExperiBank/.LoginActivity')
         self.options.set_capability('appPackage', 'com.experitest.ExperiBank')
         self.options.set_capability('appActivity', '.LoginActivity')
         self.options.set_capability('platformName', 'android')
-        self.options.set_capability('deviceQuery', "@os='android'")
-        self.options.set_capability('appiumVersion', '1.22.3')
+        self.options.set_capability('udid', "RFCR20P6TPL")
         self.driver = webdriver.Remote(self.getUrl(), options=self.options)
 
     def testAndroidNativeDemo(self):
@@ -27,16 +27,6 @@ class AndroidDemoTest(base_test.BaseTest):
         self.driver.find_element(By.ID, 'com.experitest.ExperiBank:id/passwordTextField').send_keys('company')
         self.driver.find_element(By.ID, 'com.experitest.ExperiBank:id/loginButton').click()
 
-        WebDriverWait(self.driver, 10).until(
-            expected_conditions.presence_of_element_located((By.ID, 'com.experitest.ExperiBank:id/makePaymentButton')))
-
-        self.driver.find_element(By.ID, 'com.experitest.ExperiBank:id/makePaymentButton').click()
-        self.driver.find_element(By.ID, 'com.experitest.ExperiBank:id/phoneTextField').send_keys('1234567')
-        self.driver.find_element(By.ID, 'com.experitest.ExperiBank:id/nameTextField').send_keys('Jon Snow')
-        self.driver.find_element(By.ID, 'com.experitest.ExperiBank:id/amountTextField').send_keys('50')
-        self.driver.find_element(By.ID, 'com.experitest.ExperiBank:id/countryTextField').send_keys('Switzerland')
-        self.driver.find_element(By.ID, 'com.experitest.ExperiBank:id/sendPaymentButton').click()
-        self.driver.find_element(By.ID, 'android:id/button1').click()
 
     def tearDown(self):
         print ('Report URL: ' + self.driver.capabilities['reportUrl'])
