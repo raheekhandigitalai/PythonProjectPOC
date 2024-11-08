@@ -22,7 +22,7 @@ class AndroidDemoTest(base_test.BaseTest):
         self.options.set_capability('appPackage', 'com.experitest.ExperiBank')
         self.options.set_capability('appActivity', '.LoginActivity')
         self.options.set_capability('platformName', 'android')
-        self.options.set_capability('udid', "RFCR20P6TPL")
+        self.options.set_capability('deviceQuery', "@os='android'")
 
         # os.environ["HTTP_PROXY"] = self.proxyUrl
         # os.environ["HTTPS_PROXY"] = self.proxyUrl
