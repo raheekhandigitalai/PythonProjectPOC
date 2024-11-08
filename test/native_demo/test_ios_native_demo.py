@@ -21,7 +21,7 @@ class IosDemoTest(base_test.BaseTest):
         self.options.set_capability('app', 'cloud:com.experitest.ExperiBank')
         self.options.set_capability('bundleId', 'com.experitest.ExperiBank')
         self.options.set_capability('platformName', 'ios')
-        self.options.set_capability('udid', "00008020-001659561E78003A")
+        self.options.set_capability('deviceQuery', "@os='ios'")
 
 
         # os.environ["HTTP_PROXY"] = self.proxyUrl
